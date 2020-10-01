@@ -1,0 +1,33 @@
+Bài 1
+How to check a variable’s type?
+=>
+use typeof
+var str = "hello world";
+console.log(typeof str);
+console.log(typeof "hello world");
+
+In what cases, you will get SyntaxError from the compiler telling you that some of your variables have invalid names? Can you give 3 different examples of invalid names?
+=>
+Bắt đầu bằng ký tự hoặc kí tự gạch dưới _ (không được bắt đầu bằng số).
+Không chứa các kí tự đặc biệt như & * ( , ) .
+Tên biến không được trùng với từ khóa như var let for if ...
+
+Bài 2
+Write a program that calculates the area of a circle.
+=>
+<script>
+  var banKinh = prompt("Nhap ban kinh duong tron:");
+  var dienTich = parseInt(banKinh)*parseInt(banKinh)*3.14/2
+  console.log(`Dien tich hinh tron la: ${dienTich}`);
+</script>
+
+Bài 3
+Write a program that converts Celsius (0C) into Fahrenheit (0F) 
+=>
+<script>
+  var doC = prompt("Nhap nhiet do (C):");
+  var doF = parseInt(doC) + 40;
+  console.log(`Doi sang do (F) la: ${doF}`);
+</script>
+
+Bài 4
