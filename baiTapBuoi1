@@ -27,7 +27,7 @@ Write a program that converts Celsius (0C) into Fahrenheit (0F)
 <script>
   var doC = prompt("Nhap nhiet do (C):");
   var doF = parseInt(doC)*1.8 + 32;
-  console.log(`${doC} = ${doF}`);
+  console.log(`${doC} (C) = ${doF} (F)`);
 </script>
 
 Bài 4
