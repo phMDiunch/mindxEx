@@ -1,3 +1,29 @@
+Bài 8
+let sheepSizes = [5,7,300,90,24,50,75];
+let joinStr = sheepSizes.join(" ");
+console.log(`hello, my name is Phuong Nam and here is my sheep sizes\n${joinStr}`);
+let maxSize = Math.max(...sheepSizes);
+console.log(`now my biggest sheep há size ${maxSize}, let's shave it`);
+sheepSizes[sheepSizes.indexOf(maxSize)] = 8;
+let afterShave = sheepSizes.join(" ");
+console.log(`after shearing, here is my flock\n${afterShave}`);
+
+for (let i=0;i<4;i++){
+    console.log(`MONTH ${i+1}`);
+    let newSheepSizes = sheepSizes.map(value => value+50);
+    console.log(`${i+1} month is pass, my sheeps have grown, here are their sizes\n${newSheepSizes}`)
+    let maxSize = Math.max(...newSheepSizes);
+    console.log(`now my biggest sheep há size ${maxSize}, let's shave it`);
+    newSheepSizes[newSheepSizes.indexOf(maxSize)] = 8;
+    let afterShave = newSheepSizes.join(" ");
+    console.log(`after shearing, here is my flock\n${afterShave}`);
+    sheepSizes = newSheepSizes;
+}
+let totalSizes = 0;
+sheepSizes.forEach(value => totalSizes+=value);
+console.log(`My flock has size in total: ${totalSizes}`);
+console.log(`I would get ${totalSizes} * 2$ = ${totalSizes*2}$`);
+
 Bài 10
 let str = prompt("Nhap mot day so phan cach bang dau phay");
 let arr = str.split(",")
