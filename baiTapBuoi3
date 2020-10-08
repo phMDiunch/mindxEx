@@ -1,0 +1,13 @@
+Bài 10
+let str = prompt("Nhap mot day so phan cach bang dau phay");
+let arr = str.split(",")
+let newArr = arr.filter(value => parseInt(value)%2 != 0);
+console.log(`${arr} => ${newArr}`);
+
+
+
+Bài 11
+let str = prompt("Nhap mot day danh tu rieng cach nhau bang dau phay");
+let arr = str.split(",")
+let newArr = arr.map(value => `<${value}>`);
+console.log(`${arr} => ${
