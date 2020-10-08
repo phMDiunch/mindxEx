@@ -11,7 +11,8 @@ console.log(`after shearing, here is my flock\n${afterShave}`);
 for (let i=0;i<4;i++){
     console.log(`MONTH ${i+1}`);
     let newSheepSizes = sheepSizes.map(value => value+50);
-    console.log(`${i+1} month is pass, my sheeps have grown, here are their sizes\n${newSheepSizes}`)
+    let joinNewStr = newSheepSizes.join(" ");
+    console.log(`${i+1} month is pass, my sheeps have grown, here are their sizes\n${joinNewStr}`)
     let maxSize = Math.max(...newSheepSizes);
     console.log(`now my biggest sheep há size ${maxSize}, let's shave it`);
     newSheepSizes[newSheepSizes.indexOf(maxSize)] = 8;
@@ -19,6 +20,7 @@ for (let i=0;i<4;i++){
     console.log(`after shearing, here is my flock\n${afterShave}`);
     sheepSizes = newSheepSizes;
 }
+
 let totalSizes = 0;
 sheepSizes.forEach(value => totalSizes+=value);
 console.log(`My flock has size in total: ${totalSizes}`);
