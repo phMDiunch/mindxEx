@@ -1,0 +1,75 @@
+Bài tập thêm
+
+let phoneList = [
+    {
+        name: "PT",
+        phone: "0973000001"
+    },
+    {
+        name: "TS",
+        phone: "0973000002"
+    }
+];
+
+let controlCharacter = ["c","r","u","d","e"];
+let input = "";
+do {
+    do {
+        input = prompt("Nhap vao 4 chu cai C R U D E").toLowerCase();
+    } while (controlCharacter.indexOf(input) == -1);
+
+    switch (input){
+        case "c": 
+            create();
+            break;
+        case "r":
+            read();
+            break;
+        case "u":
+            update();
+            break;
+        case "d":
+            del();
+            break;
+    }
+
+} while (input !== "e");
+
+
+
+function read(){
+    console.clear();
+    for (let i=0;i<phoneList.length;i++)
+    console.log(`${phoneList[i].name} - ${phoneList[i].phone}`);
+}
+
+function create(){
+    let inputName = prompt("Nhap ten nguoi muon them");
+    let inputPhone = prompt("Nhap so dien thoai");
+    phoneList.push({name: inputName, phone: inputPhone});
+    read();
+}
+
+function update(){
+    read();
+    let i = nameToIndex("sua");
+    phoneList[i].name = prompt("Nhap ten muon sua");
+    phoneList[i].phone = prompt("Nhap so dien thoai muon sua");
+    read();
+}
+
+function del(){
+    read()
+    let i = nameToIndex("xoa");;
+    phoneList.splice(i,1);
+    read(); 
+}
+
+function nameToIndex(action){
+    do {
+        let inputName = prompt(`Nhap ten nguoi muon ${action}`);
+        var index = phoneList.findIndex(obj => obj.name == inputName);
+        if (index == -1){console.log("Nhap sai ten")};
+    } while (index == -1);
+    return index;
+}
