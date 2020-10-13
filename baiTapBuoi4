@@ -39,8 +39,9 @@ do {
 
 function read(){
     console.clear();
-    for (let i=0;i<phoneList.length;i++)
-    console.log(`${phoneList[i].name} - ${phoneList[i].phone}`);
+    for (let i=0;i<phoneList.length;i++){
+        console.log(`${phoneList[i].name} - ${phoneList[i].phone}`);
+    }
 }
 
 function create(){
