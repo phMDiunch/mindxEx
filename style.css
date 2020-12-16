@@ -1,0 +1,20 @@
+.root {
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.root .title {
+    background-color: red;
+    padding: 10px;
+    color: white;
+    margin: 0;
+}
+
+.root .main {
+    padding: 20px;
+    background-color:turquoise;
+}
